@@ -13,13 +13,14 @@ pipeline{
 
         stage('Build') {
             steps{
-                sh 'npm install'
-                sh 'npm run build'
+                bat "node -v"
+                bat 'npm install'
+                bat 'npm run build'
             }
         }
         stage('Run Unit Tests') {
             steps{
-                sh 'npm run test'
+                bat 'npm run test'
                 }
             }
         }
